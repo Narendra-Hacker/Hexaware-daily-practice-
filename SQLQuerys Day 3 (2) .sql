@@ -162,7 +162,7 @@ select * from lms_book_details;
 select * from lms_book_issue; 
 
 /* Problem # 1:
-	Write a query to display the member id, member name, city and membership status who are all having life time membership. Hint: Life time membership status is “Permanent”. */
+	Write a query to display the member id, member name, city and membership status who are all having life time membership. Hint: Life time membership status is Â“PermanentÂ”. */
 
 select * from LMS_MEMBERS;
 
@@ -184,7 +184,7 @@ select * from lms_book_details;
 select book_code,book_title,author,PUBLISH_DATE from lms_book_details where author like 'P%';
 
 /* Problem # 5:
-	Write a query to display the total number of Java books available in library with alias name ‘NO_OF_BOOKS’. */
+	Write a query to display the total number of Java books available in library with alias name Â‘NO_OF_BOOKSÂ’. */
 
 select * from lms_book_details;
 
@@ -196,14 +196,14 @@ select count(book_code) as NO_OF_BOOKS from lms_book_details where category='JAV
 
 
 /* Problem # 6:
-	Write a query to list the category and number of books in each category with alias name ‘NO_OF_BOOKS’.*/
+	Write a query to list the category and number of books in each category with alias name Â‘NO_OF_BOOKSÂ’.*/
 
 select * from lms_book_details;
 
 select category,count(book_code) as NO_OF_BOOKS from lms_book_details group by category order by category;
 
 /* Problem # 7:
-	Write a query to display the number of books published by "Prentice Hall” with the alias name “NO_OF_BOOKS”.*/
+	Write a query to display the number of books published by "Prentice HallÂ” with the alias name Â“NO_OF_BOOKSÂ”.*/
 
 select * from lms_book_details;
 
@@ -232,7 +232,7 @@ select * from lms_members;
 select member_id,member_name,date_register,membership_status from lms_members where (date_register<'2012-03-01') and membership_status='Temporary';
 
 /* Problem #11:
-	Write a query to display the member id, member name who’s City is CHENNAI or DELHI. Hint: Display the member name in title case with alias name 'Name'. */
+	Write a query to display the member id, member name whoÂ’s City is CHENNAI or DELHI. Hint: Display the member name in title case with alias name 'Name'. */
 
 select * from lms_members;
 
@@ -242,7 +242,7 @@ select member_id,member_name,city from lms_members where city='CHENNAI' or city=
 Write a query to concatenate book title, author and display in the following format.
 Book_Title_is_written_by_Author
 Example:  Let Us C_is_written_by_Yashavant Kanetkar
-Hint: display unique books. Use “BOOK_WRITTEN_BY” as alias name. */
+Hint: display unique books. Use Â“BOOK_WRITTEN_BYÂ” as alias name. */
 
 /* SELECT 
     Title, 
@@ -258,7 +258,7 @@ select * from lms_book_details;
 select book_code,concat(Book_title,'_is_written_by_'+author) as Book_Written_By from lms_book_details;
 
 /* Problem #13:
-	Write a query to display the average price of books which is belonging to ‘JAVA’ category with alias name “AVERAGEPRICE”.*/
+	Write a query to display the average price of books which is belonging to Â‘JAVAÂ’ category with alias name Â“AVERAGEPRICEÂ”.*/
 
 select * from lms_book_details;
 
@@ -276,8 +276,8 @@ select avg(price) from lms_book_details where book_code <='BL000006';
 	select supplier_id,supplier_name,email from LMS_SUPPLIERS_DETAILS where email like '%@gmail.com';
 
 /* Problem#16:
-	Write a query to display the supplier id, supplier name and contact.  If phone number is null then display ‘No’ else display ‘Yes’ 
-	with alias name “PHONENUMAVAILABLE”. Hint: Use ISNULL.*/
+	Write a query to display the supplier id, supplier name and contact.  If phone number is null then display Â‘NoÂ’ else display Â‘YesÂ’ 
+	with alias name Â“PHONENUMAVAILABLEÂ”. Hint: Use ISNULL.*/
 
 	select * from lms_suppliers_details;
 
